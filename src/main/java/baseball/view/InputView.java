@@ -16,6 +16,13 @@ public class InputView {
         return input;
     }
 
+    public static String ASK_RETRY() {
+        System.out.println(ASK_RETRY);
+        String input = Console.readLine();
+        validateType(input);
+        return input;
+    }
+
     private static void validateType(String input) {
         if (!isValidType(input)) {
             throw new IllegalArgumentException(INVALID_TYPE);
