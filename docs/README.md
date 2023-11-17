@@ -16,7 +16,7 @@
 
 ## 역할 및 책임 목록
 
-### Domain
+### domain
 
 - **Numbers**
     - 숫자간 중복 검증
@@ -24,10 +24,10 @@
 - **Referee**
     - 리스트를 비교하여 결과를 카운트함.
     - 3스트라이크면 게임 종료를 선언함.
-- **Result**
+- **GameResult**
     - 볼, 스트라이크의 변수를 가지고 있음.
 
-### View
+### view
 
 - **InputView**
     - 세자리 숫자를 입력 받음
@@ -37,7 +37,7 @@
     - 게임결과 출력
     - 게임 종료메시지 출력
 
-### Controller
+### controller
 
-- **controller**
+- **Controller**
     - 예외가 발생되면 해당 부분을 반복시킴
