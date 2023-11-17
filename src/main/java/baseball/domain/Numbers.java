@@ -32,4 +32,8 @@ public class Numbers {
                 .count();
         return sizeAfterCut != numbers.size();
     }
+
+    public List<Integer> getNumbers() {
+        return Numbers;
+    }
 }
