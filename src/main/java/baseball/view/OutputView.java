@@ -8,6 +8,7 @@ public class OutputView {
     private static final String NOTHING = "낫싱";
     private static final String ONLY_BALL_OR_ONLY_STRIKE_FORMAT = "%d%s%n";
     private static final String BALL_AND_STRIKE_FORMAT = "%d%s %d%s%n";
+    private static final String GAME_END = "3개의 숫자를 모두 맞히셨습니다! 게임 종료";
 
     public static void printError(Exception e) {
         System.out.println(e.getMessage());
@@ -42,5 +43,9 @@ public class OutputView {
 
     private static boolean isNothingBy(GameResult gameResult) {
         return gameResult.getBall() == 0 && gameResult.getStrike() == 0;
+    }
+
+    public static void printGameEnd() {
+        System.out.println(GAME_END);
     }
 }
