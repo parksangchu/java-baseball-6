@@ -34,11 +34,11 @@ public class OutputView {
     }
 
     private static boolean isOnlyBallBy(GameResult gameResult) {
-        return gameResult.getBall() == 0 && gameResult.getStrike() != 0;
+        return gameResult.getBall() != 0 && gameResult.getStrike() == 0;
     }
 
     private static boolean isOnlyStrikeBy(GameResult gameResult) {
-        return gameResult.getBall() != 0 && gameResult.getStrike() == 0;
+        return gameResult.getBall() == 0 && gameResult.getStrike() != 0;
     }
 
     private static boolean isNothingBy(GameResult gameResult) {
