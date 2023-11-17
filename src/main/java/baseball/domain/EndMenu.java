@@ -5,9 +5,9 @@ public class EndMenu {
     private static final String COMPLETE_END = "2";
     private static final String INVALID_RANGE = "[ERROR] 1 혹은 2를 입력하셔야 합니다.";
 
-    public static boolean isRetry(String input) {
+    public static boolean isCompleteEnd(String input) {
         validateRange(input);
-        return input.equals(RETRY);
+        return input.equals(COMPLETE_END);
     }
 
     private static void validateRange(String input) {
