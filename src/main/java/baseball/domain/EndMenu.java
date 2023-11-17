@@ -11,8 +11,8 @@ public class EndMenu {
         this.endMenu = Integer.parseInt(endMenu);
     }
 
-    public boolean isCompleteEnd() {
-        return endMenu == COMPLETE_END;
+    public boolean isRetry() {
+        return endMenu == RETRY;
     }
 
     private void validateRange(String input) {
