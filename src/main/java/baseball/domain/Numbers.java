@@ -34,7 +34,7 @@ public class Numbers {
     }
 
     public boolean match(List<Integer> numbers, int index) {
-        return this.numbers.get(index) == numbers.get(index);
+        return this.numbers.get(index).equals(numbers.get(index));
     }
 
     public List<Integer> getNumbers() {
