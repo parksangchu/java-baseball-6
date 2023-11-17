@@ -10,6 +10,7 @@ public class InputView {
 
 
     public static String ASK_PLAYER_NUMBERS() {
+        System.out.print(ASK_PLAYER_NUMBERS);
         String input = Console.readLine();
         validateType(input);
         return input;
