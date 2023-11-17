@@ -10,7 +10,7 @@ public class GameResult {
         this.strike = strike;
     }
 
-    public boolean isGameEnd() {
+    public boolean isEnd() {
         return strike == GAME_END_COUNT;
     }
 
