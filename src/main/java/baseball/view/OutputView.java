@@ -10,9 +10,6 @@ public class OutputView {
     private static final String BALL_AND_STRIKE_FORMAT = "%d%s %d%s%n";
     private static final String GAME_END = "3개의 숫자를 모두 맞히셨습니다! 게임 종료";
 
-    public static void printError(Exception e) {
-        System.out.println(e.getMessage());
-    }
 
     public static void printGameResult(GameResult gameResult) {
         if (isOnlyBallBy(gameResult)) {
