@@ -31,7 +31,7 @@ public class GameController implements Runnable {
             Numbers playerNumbers = createPlayerNumbers();
             GameResult gameResult = createGameResult(computerNumbers, playerNumbers);
             OutputView.printGameResult(gameResult);
-            if (gameResult.isEnd()) {
+            if (gameResult.isThreeStrike()) {
                 OutputView.printGameEnd();
                 break;
             }
@@ -39,15 +39,9 @@ public class GameController implements Runnable {
     }
 
     private Numbers createPlayerNumbers() {
-        while (true) {
-            try {
-                String numbersInput = InputView.ASK_PLAYER_NUMBERS();
-                List<Integer> playerNumbers = Convertor.numbersOf(numbersInput);
-                return new Numbers(playerNumbers);
-            } catch (IllegalArgumentException e) {
-                OutputView.printError(e);
-            }
-        }
+        String numbersInput = InputView.ASK_PLAYER_NUMBERS();
+        List<Integer> playerNumbers = Convertor.numbersOf(numbersInput);
+        return new Numbers(playerNumbers);
     }
 
     private GameResult createGameResult(Numbers computerNumbers, Numbers playerNumbers) {
@@ -55,13 +49,7 @@ public class GameController implements Runnable {
     }
 
     private EndMenu createEndMenu() {
-        while (true) {
-            try {
-                String input = InputView.ASK_RETRY();
-                return new EndMenu(input);
-            } catch (IllegalArgumentException e) {
-                OutputView.printError(e);
-            }
-        }
+        String input = InputView.ASK_RETRY();
+        return new EndMenu(input);
     }
 }
