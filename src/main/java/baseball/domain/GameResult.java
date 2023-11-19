@@ -10,7 +10,7 @@ public class GameResult {
         this.strike = strike;
     }
 
-    public boolean isEnd() {
+    public boolean isThreeStrike() {
         return strike == GAME_END_COUNT;
     }
 
