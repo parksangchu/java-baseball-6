@@ -14,7 +14,7 @@ class RefereeTest {
     @CsvSource(value = {"345,1", "341,2", "312,3"})
     void countBallBy(String input, int expect) {
         Numbers computerNumbers = new Numbers(List.of(1, 2, 3));
-        Numbers playerNumbers = new Numbers(Convertor.numbersOf(input));
+        Numbers playerNumbers = new Numbers(InputConvertor.numbersOf(input));
         GameResult gameResult = Referee.judgeGameResultBy(computerNumbers, playerNumbers);
         assertThat(gameResult.getBall()).isEqualTo(expect);
     }
@@ -24,7 +24,7 @@ class RefereeTest {
     @CsvSource(value = {"145,1", "125,2", "123,3"})
     void countStrikeBy(String input, int expect) {
         Numbers computerNumbers = new Numbers(List.of(1, 2, 3));
-        Numbers playerNumbers = new Numbers(Convertor.numbersOf(input));
+        Numbers playerNumbers = new Numbers(InputConvertor.numbersOf(input));
         GameResult gameResult = Referee.judgeGameResultBy(computerNumbers, playerNumbers);
         assertThat(gameResult.getStrike()).isEqualTo(expect);
     }

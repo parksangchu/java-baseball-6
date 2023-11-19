@@ -1,9 +1,9 @@
 package baseball.controller;
 
 import baseball.domain.Computer;
-import baseball.domain.Convertor;
 import baseball.domain.EndMenu;
 import baseball.domain.GameResult;
+import baseball.domain.InputConvertor;
 import baseball.domain.Numbers;
 import baseball.domain.Referee;
 import baseball.view.InputView;
@@ -40,7 +40,7 @@ public class GameController implements Runnable {
 
     private Numbers createPlayerNumbers() {
         String numbersInput = InputView.ASK_PLAYER_NUMBERS();
-        List<Integer> playerNumbers = Convertor.numbersOf(numbersInput);
+        List<Integer> playerNumbers = InputConvertor.numbersOf(numbersInput);
         return new Numbers(playerNumbers);
     }
 
