@@ -31,7 +31,7 @@ public class GameController implements Runnable {
             Numbers playerNumbers = createPlayerNumbers();
             GameResult gameResult = createGameResult(computerNumbers, playerNumbers);
             OutputView.printGameResult(gameResult);
-            if (gameResult.isThreeStrike()) {
+            if (gameResult.isGameEnd()) {
                 OutputView.printGameEnd();
                 break;
             }
