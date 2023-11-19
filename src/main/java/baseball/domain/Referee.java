@@ -20,14 +20,14 @@ public class Referee {
     }
 
     private static boolean isBall(Numbers computerNumbers, Numbers playerNumbers, int i) {
-        return !computerNumbers.match(playerNumbers.getNumbers(), i)
+        return !computerNumbers.isSameIndex(playerNumbers.getNumbers(), i)
                 && computerNumbers.getNumbers().contains(playerNumbers.getNumbers().get(i));
     }
 
     private static int judgeStrikeBy(Numbers computerNumbers, Numbers playerNumbers) {
         int strike = 0;
         for (int i = 0; i < NUMBERS_SIZE; i++) {
-            if (computerNumbers.match(playerNumbers.getNumbers(), i)) {
+            if (computerNumbers.isSameIndex(playerNumbers.getNumbers(), i)) {
                 strike++;
             }
         }

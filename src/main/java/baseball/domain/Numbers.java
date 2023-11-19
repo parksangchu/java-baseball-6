@@ -48,7 +48,7 @@ public class Numbers {
                 .anyMatch(number -> number > MAX_NUMBER || number < MIN_NUMBER);
     }
 
-    public boolean match(List<Integer> numbers, int index) {
+    public boolean isSameIndex(List<Integer> numbers, int index) {
         return this.numbers.get(index).equals(numbers.get(index));
     }
 
