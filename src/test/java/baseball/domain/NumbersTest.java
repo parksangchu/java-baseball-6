@@ -1,11 +1,13 @@
 package baseball.domain;
 
+import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 import static org.assertj.core.api.AssertionsForClassTypes.assertThatThrownBy;
 
 import java.util.List;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvSource;
 
 class NumbersTest {
     @Test
@@ -31,9 +33,11 @@ class NumbersTest {
 
     @ParameterizedTest
     @DisplayName("같은 숫자가 같은 인덱스에 있으면 true")
-    void match() {
+    @CsvSource(value = {"0,true", "1,false", "2,true"})
+    void match(int input, boolean expect) {
         Numbers numbers1 = new Numbers(List.of(1, 2, 3));
         Numbers numbers2 = new Numbers(List.of(1, 4, 3));
-
+        assertThat(numbers1.isSameIndex(numbers2, input))
+                .isEqualTo(expect);
     }
 }
