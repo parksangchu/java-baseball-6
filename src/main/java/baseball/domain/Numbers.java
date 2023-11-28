@@ -1,5 +1,6 @@
 package baseball.domain;
 
+import java.util.Collections;
 import java.util.List;
 
 public class Numbers {
@@ -54,6 +55,6 @@ public class Numbers {
     }
 
     public List<Integer> getNumbers() {
-        return numbers;
+        return Collections.unmodifiableList(numbers);
     }
 }
